@@ -1,5 +1,7 @@
 package com.alasdoo.developercourseassignment.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,9 +11,13 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "teacher_developer_course")
-public class TeacherDeveloperCourse {
+public class TeacherDeveloperCourse implements Serializable{
 
-    @Id
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", unique = true, nullable = false)
     private Integer id;

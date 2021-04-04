@@ -4,7 +4,11 @@ import java.io.Serializable;
 
 public class TeacherDTO implements Serializable {
 
-    private Integer id;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Integer id;
     private String teacherName;
     private String teacherSurname;
     private String teacherEmail;

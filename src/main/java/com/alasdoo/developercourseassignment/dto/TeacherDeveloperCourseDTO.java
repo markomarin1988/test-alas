@@ -1,8 +1,14 @@
 package com.alasdoo.developercourseassignment.dto;
 
-public class TeacherDeveloperCourseDTO {
+import java.io.Serializable;
 
-    private Integer id;
+public class TeacherDeveloperCourseDTO implements Serializable{
+
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Integer id;
     private Integer developerCourseId;
     private Integer teacherId;
 

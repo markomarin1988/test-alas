@@ -4,7 +4,11 @@ import java.io.Serializable;
 
 public class DeveloperCourseDTO implements Serializable {
 
-    private Integer id;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Integer id;
     private String developerCourseName;
     private Integer costPerClass;
     private Integer classesPerWeek;
