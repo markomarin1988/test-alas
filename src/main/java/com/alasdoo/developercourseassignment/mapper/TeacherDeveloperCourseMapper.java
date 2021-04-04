@@ -2,6 +2,10 @@ package com.alasdoo.developercourseassignment.mapper;
 
 import com.alasdoo.developercourseassignment.dto.TeacherDeveloperCourseDTO;
 import com.alasdoo.developercourseassignment.entity.TeacherDeveloperCourse;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 
@@ -19,4 +23,13 @@ public class TeacherDeveloperCourseMapper {
         BeanUtils.copyProperties(teacherDeveloperCourseDTOSrc, teacherDeveloperCourse);
         return teacherDeveloperCourse;
     }
+    
+    public List<TeacherDeveloperCourseDTO> transformToListOfDTO(List<TeacherDeveloperCourse> teacherDeveloperCourseDTOSrc) {
+        List<TeacherDeveloperCourseDTO> teacherDeveloperCourseDTO = new ArrayList<>(teacherDeveloperCourseDTOSrc.size());
+        for (TeacherDeveloperCourse teacherDeveloperCourse : teacherDeveloperCourseDTOSrc) {
+            teacherDeveloperCourseDTO.add(transformToDTO(teacherDeveloperCourse));
+        }
+        return teacherDeveloperCourseDTO;
+    }
 }
+
