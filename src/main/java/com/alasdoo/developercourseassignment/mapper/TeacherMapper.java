@@ -15,9 +15,9 @@ public class TeacherMapper {
     }
 
     public Teacher transformToEntity(TeacherDTO teacherDTOSrc) {
-        Teacher developerCourseTeacher = new Teacher();
-        BeanUtils.copyProperties(teacherDTOSrc, developerCourseTeacher);
-        return developerCourseTeacher;
+        Teacher teacher = new Teacher();
+        BeanUtils.copyProperties(teacherDTOSrc, teacher);
+        return teacher;
     }
 
 }
