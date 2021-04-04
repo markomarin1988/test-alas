@@ -4,6 +4,7 @@ import com.alasdoo.developercourseassignment.entity.TeacherDeveloperCourse;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Optional;
 
 @Repository
@@ -12,4 +13,6 @@ public interface TeacherDeveloperCourseRepository extends JpaRepository<TeacherD
     Optional<TeacherDeveloperCourse> findByDeveloperCourseIdAndTeacherId(Integer developerCourseId, Integer teacherId);
 
     Optional<TeacherDeveloperCourse> findByTeacherId(Integer teacherId);
+    
+    Optional<List<TeacherDeveloperCourse>> findByDeveloperCourseId(Integer developerCourseId);
 }
