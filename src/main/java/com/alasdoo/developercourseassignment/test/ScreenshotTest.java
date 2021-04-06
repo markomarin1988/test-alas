@@ -7,7 +7,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 @Listeners(Listener.class)
 public class ScreenshotTest extends LaunchAplication {
-	
+	//call method for start aplication
 	@BeforeMethod
 	public void setUp() {
 		initialization();
@@ -17,10 +17,10 @@ public class ScreenshotTest extends LaunchAplication {
 	public void tearDown() {
 		driver.quit();
 	}
-	
+	//methods checks that the two objects are equals or not
 	@Test
 	public void takeScreenshotTest() {
-		Assert.assertEquals(true, true);
+		Assert.assertEquals(false, true);
 	}
 
 }

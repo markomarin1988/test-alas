@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 public class RunFromAnyBrowser {
 	WebDriver driver;
 	
+	//setup parameters for any browser
 	@BeforeMethod
 	@org.testng.annotations.Parameters("browser")
 	public void BeforMethod(String browserName) {
@@ -27,16 +28,17 @@ public class RunFromAnyBrowser {
 			System.setProperty("webdriver.chrome.driver", "/Users/markomarinkovic/Documents/Napredna Java/3 modul/WebDriver/edgedriver_mac64/msedgedriver");
 			driver = new RemoteWebDriver(DesiredCapabilities.edge());
 	}
-		
+		// setup maximize window and URL
 		driver.manage().window().maximize();
 		driver.get("http://localhost:3000/student");
 
 }
+	//print title name
 	@Test
 	public void Test1() {
 		System.out.println(driver.getTitle());
 	}
-	
+	//close aplication
 	@AfterMethod
 	public void AfterMethod() {
 		driver.close();

@@ -19,7 +19,7 @@ public class LaunchAplication {
 		System.out.println(driver.getTitle());
 		
 	}
-	
+	// method for takes skreenshot and save in folder
 	public void failed() {
 		
 		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
